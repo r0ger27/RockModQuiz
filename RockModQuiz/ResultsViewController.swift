@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ResultsViewController.swift
 //  RockModQuiz
 //
 //  Created by Ruslan Safin on 06/05/2019.
@@ -8,11 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ResultsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
 }
-

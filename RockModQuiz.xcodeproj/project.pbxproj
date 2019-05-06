@@ -8,24 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		4BEDE3FF228055F4001D069A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEDE3FE228055F4001D069A /* AppDelegate.swift */; };
-		4BEDE401228055F4001D069A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEDE400228055F4001D069A /* ViewController.swift */; };
 		4BEDE404228055F4001D069A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BEDE402228055F4001D069A /* Main.storyboard */; };
 		4BEDE406228055F5001D069A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BEDE405228055F5001D069A /* Assets.xcassets */; };
 		4BEDE409228055F5001D069A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BEDE407228055F5001D069A /* LaunchScreen.storyboard */; };
 		4BEDE4172280570E001D069A /* NewRocker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BEDE4162280570E001D069A /* NewRocker-Regular.ttf */; };
 		4BEDE41922805723001D069A /* Beautiful People Personal Use.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BEDE41822805723001D069A /* Beautiful People Personal Use.ttf */; };
+		4BEDE41B228062C8001D069A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEDE41A228062C8001D069A /* WelcomeViewController.swift */; };
+		4BEDE41D228062FE001D069A /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEDE41C228062FE001D069A /* QuestionsViewController.swift */; };
+		4BEDE41F2280631E001D069A /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEDE41E2280631E001D069A /* ResultsViewController.swift */; };
+		4BEDE421228063C2001D069A /* QuestionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEDE420228063C2001D069A /* QuestionsData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4BEDE3FB228055F4001D069A /* RockModQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockModQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BEDE3FE228055F4001D069A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4BEDE400228055F4001D069A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4BEDE403228055F4001D069A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BEDE405228055F5001D069A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BEDE408228055F5001D069A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BEDE40A228055F5001D069A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BEDE4162280570E001D069A /* NewRocker-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewRocker-Regular.ttf"; sourceTree = "<group>"; };
 		4BEDE41822805723001D069A /* Beautiful People Personal Use.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Beautiful People Personal Use.ttf"; sourceTree = "<group>"; };
+		4BEDE41A228062C8001D069A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		4BEDE41C228062FE001D069A /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		4BEDE41E2280631E001D069A /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		4BEDE420228063C2001D069A /* QuestionsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +64,6 @@
 		4BEDE3FD228055F4001D069A /* RockModQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				4BEDE400228055F4001D069A /* ViewController.swift */,
 				4BEDE4112280560A001D069A /* Model */,
 				4BEDE41022805603001D069A /* View */,
 				4BEDE41222805610001D069A /* Controller */,
@@ -80,6 +85,7 @@
 		4BEDE4112280560A001D069A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4BEDE420228063C2001D069A /* QuestionsData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -87,6 +93,9 @@
 		4BEDE41222805610001D069A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4BEDE41A228062C8001D069A /* WelcomeViewController.swift */,
+				4BEDE41C228062FE001D069A /* QuestionsViewController.swift */,
+				4BEDE41E2280631E001D069A /* ResultsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -183,7 +192,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BEDE401228055F4001D069A /* ViewController.swift in Sources */,
+				4BEDE41B228062C8001D069A /* WelcomeViewController.swift in Sources */,
+				4BEDE41D228062FE001D069A /* QuestionsViewController.swift in Sources */,
+				4BEDE41F2280631E001D069A /* ResultsViewController.swift in Sources */,
+				4BEDE421228063C2001D069A /* QuestionsData.swift in Sources */,
 				4BEDE3FF228055F4001D069A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

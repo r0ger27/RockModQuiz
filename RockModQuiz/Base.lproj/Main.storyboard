@@ -9,11 +9,16 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NewRocker-Regular.ttf">
+            <string>NewRocker-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RockModQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="RockModQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,15 +30,15 @@
                                     <constraint firstAttribute="width" constant="288" id="In3-8j-0T2"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a Rocker or a Mod?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3S-r8-H25">
-                                <rect key="frame" x="16" y="286" width="288" height="62.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a Rocker or a Fogey?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3S-r8-H25">
+                                <rect key="frame" x="16" y="286" width="288" height="69"/>
+                                <fontDescription key="fontDescription" name="NewRocker-Regular" family="NewRocker" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTA-VU-HfB">
-                                <rect key="frame" x="128" y="482" width="64" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <rect key="frame" x="127" y="481" width="66" height="37"/>
+                                <fontDescription key="fontDescription" name="NewRocker-Regular" family="NewRocker" pointSize="20"/>
                                 <state key="normal" title="START"/>
                                 <connections>
                                     <segue destination="uxT-N7-Ec0" kind="show" id="5Y1-NU-jmz"/>
@@ -76,122 +81,102 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZ0-I2-4Je" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="471" y="-16"/>
+            <point key="canvasLocation" x="489" y="-16"/>
         </scene>
         <!--Question № .. of ..-->
         <scene sceneID="MvD-Pn-6he">
             <objects>
-                <viewController id="8Yb-w6-ATA" sceneMemberID="viewController">
+                <viewController id="8Yb-w6-ATA" customClass="QuestionsViewController" customModule="RockModQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p8a-Kb-F0K">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaL-S1-NNA">
-                                <rect key="frame" x="133.5" y="482" width="53" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="NEXT"/>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box_off" translatesAutoresizingMaskIntoConstraints="NO" id="kHe-jK-TF9">
-                                <rect key="frame" x="20" y="191" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="jfL-7F-YkP"/>
-                                    <constraint firstAttribute="width" constant="20" id="vKx-sl-knq"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer number one" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsH-xc-x3F">
-                                <rect key="frame" x="55" y="190.5" width="249" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvu-DF-4eS">
+                                <rect key="frame" x="103.5" y="141" width="113.5" height="25"/>
+                                <fontDescription key="fontDescription" name="NewRocker-Regular" family="NewRocker" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box_off" translatesAutoresizingMaskIntoConstraints="NO" id="4HK-FX-naD">
-                                <rect key="frame" x="20" y="241" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="at8-yO-sCS"/>
-                                    <constraint firstAttribute="width" constant="20" id="id8-dO-6KD"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer number two" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vk6-aA-9Up">
-                                <rect key="frame" x="55" y="240.5" width="249" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box_off" translatesAutoresizingMaskIntoConstraints="NO" id="1A4-lo-rZc">
-                                <rect key="frame" x="20" y="291" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="9o5-4O-06E"/>
-                                    <constraint firstAttribute="height" constant="20" id="TQI-fq-BEg"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer number three" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gux-Ao-exL">
-                                <rect key="frame" x="55" y="290.5" width="249" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="AMm-Yu-I8l">
+                                <rect key="frame" x="16" y="236" width="288" height="119"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhM-IY-Jck">
+                                        <rect key="frame" x="59.5" y="0.0" width="169" height="37"/>
+                                        <fontDescription key="fontDescription" name="NewRocker-Regular" family="NewRocker" pointSize="20"/>
+                                        <state key="normal" title="Answer number one"/>
+                                        <connections>
+                                            <action selector="singleButtonPressed:" destination="8Yb-w6-ATA" eventType="touchUpInside" id="Pv4-ow-bXd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImC-Dk-4vK">
+                                        <rect key="frame" x="58.5" y="41" width="171" height="37"/>
+                                        <fontDescription key="fontDescription" name="NewRocker-Regular" family="NewRocker" pointSize="20"/>
+                                        <state key="normal" title="Answer number two"/>
+                                        <connections>
+                                            <action selector="singleButtonPressed:" destination="8Yb-w6-ATA" eventType="touchUpInside" id="NJ5-hs-ZLW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haV-Qo-fZj">
+                                        <rect key="frame" x="52.5" y="82" width="183" height="37"/>
+                                        <fontDescription key="fontDescription" name="NewRocker-Regular" family="NewRocker" pointSize="20"/>
+                                        <state key="normal" title="Answer number three"/>
+                                        <connections>
+                                            <action selector="singleButtonPressed:" destination="8Yb-w6-ATA" eventType="touchUpInside" id="8AD-dn-79Q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gux-Ao-exL" firstAttribute="centerY" secondItem="1A4-lo-rZc" secondAttribute="centerY" id="1F8-GP-9as"/>
-                            <constraint firstItem="kHe-jK-TF9" firstAttribute="leading" secondItem="rW2-mg-5B8" secondAttribute="leading" constant="20" id="6ZP-5z-pXz"/>
-                            <constraint firstItem="rW2-mg-5B8" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zaL-S1-NNA" secondAttribute="trailing" constant="100" id="7MB-Yp-U3j"/>
-                            <constraint firstItem="1A4-lo-rZc" firstAttribute="top" secondItem="4HK-FX-naD" secondAttribute="bottom" constant="30" id="BxN-fY-b3q"/>
-                            <constraint firstItem="vk6-aA-9Up" firstAttribute="leading" secondItem="4HK-FX-naD" secondAttribute="trailing" constant="15" id="L3T-hD-rr6"/>
-                            <constraint firstItem="4HK-FX-naD" firstAttribute="leading" secondItem="rW2-mg-5B8" secondAttribute="leading" constant="20" id="Oks-37-9mN"/>
-                            <constraint firstItem="JsH-xc-x3F" firstAttribute="leading" secondItem="kHe-jK-TF9" secondAttribute="trailing" constant="15" id="R7R-Y9-0bD"/>
-                            <constraint firstItem="kHe-jK-TF9" firstAttribute="top" secondItem="rW2-mg-5B8" secondAttribute="top" constant="80" id="Ukl-1j-9i7"/>
-                            <constraint firstItem="gux-Ao-exL" firstAttribute="leading" secondItem="1A4-lo-rZc" secondAttribute="trailing" constant="15" id="WeD-4v-2eL"/>
-                            <constraint firstItem="rW2-mg-5B8" firstAttribute="trailing" secondItem="gux-Ao-exL" secondAttribute="trailing" constant="16" id="XYX-Rd-6a4"/>
-                            <constraint firstItem="4HK-FX-naD" firstAttribute="top" secondItem="kHe-jK-TF9" secondAttribute="bottom" constant="30" id="ePv-x3-ZlL"/>
-                            <constraint firstItem="zaL-S1-NNA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gux-Ao-exL" secondAttribute="bottom" constant="100" id="eSI-Vn-LjH"/>
-                            <constraint firstItem="zaL-S1-NNA" firstAttribute="centerX" secondItem="p8a-Kb-F0K" secondAttribute="centerX" id="fDz-fK-jge"/>
-                            <constraint firstItem="rW2-mg-5B8" firstAttribute="trailing" secondItem="JsH-xc-x3F" secondAttribute="trailing" constant="16" id="g8p-2Q-Q74"/>
-                            <constraint firstItem="rW2-mg-5B8" firstAttribute="trailing" secondItem="gux-Ao-exL" secondAttribute="trailing" constant="16" id="glo-pO-5TF"/>
-                            <constraint firstItem="rW2-mg-5B8" firstAttribute="trailing" secondItem="vk6-aA-9Up" secondAttribute="trailing" constant="16" id="j87-gg-GnY"/>
-                            <constraint firstItem="1A4-lo-rZc" firstAttribute="leading" secondItem="rW2-mg-5B8" secondAttribute="leading" constant="20" id="jrp-mi-jQp"/>
-                            <constraint firstItem="vk6-aA-9Up" firstAttribute="centerY" secondItem="4HK-FX-naD" secondAttribute="centerY" id="qFK-pa-G0q"/>
-                            <constraint firstItem="zaL-S1-NNA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rW2-mg-5B8" secondAttribute="leading" constant="100" id="xeM-eC-hST"/>
-                            <constraint firstItem="rW2-mg-5B8" firstAttribute="bottom" secondItem="zaL-S1-NNA" secondAttribute="bottom" constant="50" id="xjk-cD-1GC"/>
-                            <constraint firstItem="JsH-xc-x3F" firstAttribute="centerY" secondItem="kHe-jK-TF9" secondAttribute="centerY" id="yXZ-Eq-TQx"/>
+                            <constraint firstItem="rW2-mg-5B8" firstAttribute="trailing" secondItem="AMm-Yu-I8l" secondAttribute="trailing" constant="16" id="5UJ-Tu-1Px"/>
+                            <constraint firstItem="AMm-Yu-I8l" firstAttribute="top" secondItem="Xvu-DF-4eS" secondAttribute="bottom" constant="70" id="7qe-WO-g8M"/>
+                            <constraint firstItem="rW2-mg-5B8" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="AMm-Yu-I8l" secondAttribute="bottom" constant="30" id="Cnb-7F-Mf1"/>
+                            <constraint firstItem="Xvu-DF-4eS" firstAttribute="top" secondItem="rW2-mg-5B8" secondAttribute="top" constant="30" id="Tdx-LD-LWY"/>
+                            <constraint firstItem="rW2-mg-5B8" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Xvu-DF-4eS" secondAttribute="trailing" constant="16" id="VjZ-ba-aQw"/>
+                            <constraint firstItem="Xvu-DF-4eS" firstAttribute="centerX" secondItem="p8a-Kb-F0K" secondAttribute="centerX" id="i3W-lG-N10"/>
+                            <constraint firstItem="AMm-Yu-I8l" firstAttribute="leading" secondItem="rW2-mg-5B8" secondAttribute="leading" constant="16" id="jpU-py-7Fw"/>
+                            <constraint firstItem="Xvu-DF-4eS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rW2-mg-5B8" secondAttribute="leading" constant="16" id="lH8-A3-diu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rW2-mg-5B8"/>
                     </view>
                     <navigationItem key="navigationItem" title="Question № .. of .." id="9yJ-Dq-RmA"/>
                     <connections>
+                        <outlet property="questionLabel" destination="Xvu-DF-4eS" id="cTA-nR-3wP"/>
+                        <outlet property="singleStackView" destination="AMm-Yu-I8l" id="jCA-ed-1eD"/>
+                        <outletCollection property="singleButtons" destination="KhM-IY-Jck" collectionClass="NSMutableArray" id="PR5-Fx-sWP"/>
+                        <outletCollection property="singleButtons" destination="ImC-Dk-4vK" collectionClass="NSMutableArray" id="xtr-aL-G9b"/>
+                        <outletCollection property="singleButtons" destination="haV-Qo-fZj" collectionClass="NSMutableArray" id="nef-vW-XSp"/>
                         <segue destination="QpM-9T-CuR" kind="show" identifier="showResult" id="fGr-zj-qdZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLL-Ao-boi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1275" y="-17.95774647887324"/>
+            <point key="canvasLocation" x="1308.75" y="-16.901408450704224"/>
         </scene>
         <!--Results-->
         <scene sceneID="UXH-Gm-mEI">
             <objects>
-                <viewController id="QpM-9T-CuR" sceneMemberID="viewController">
+                <viewController id="QpM-9T-CuR" customClass="ResultsViewController" customModule="RockModQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VXa-Gf-gW2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-4h-YrN">
-                                <rect key="frame" x="0.0" y="111" width="320" height="457"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are a ......!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSd-k9-b2X">
-                                <rect key="frame" x="16" y="143" width="288" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <rect key="frame" x="16" y="143" width="288" height="43.5"/>
+                                <fontDescription key="fontDescription" name="NewRocker-Regular" family="NewRocker" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blah blah blah...some text about your answers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2E-u8-t4w">
-                                <rect key="frame" x="16" y="199" width="288" height="34"/>
-                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
+                                <rect key="frame" x="16" y="206.5" width="288" height="44.5"/>
+                                <fontDescription key="fontDescription" name="NewRocker-Regular" family="NewRocker" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3c-dP-hLs">
-                                <rect key="frame" x="132.5" y="482" width="55" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <rect key="frame" x="134" y="481" width="52" height="37"/>
+                                <fontDescription key="fontDescription" name="NewRocker-Regular" family="NewRocker" pointSize="20"/>
                                 <state key="normal" title="Again"/>
                             </button>
                         </subviews>
@@ -204,14 +189,10 @@
                             <constraint firstItem="oSd-k9-b2X" firstAttribute="leading" secondItem="A2v-qr-EGl" secondAttribute="leading" constant="16" id="FNr-XS-oz5"/>
                             <constraint firstItem="A2v-qr-EGl" firstAttribute="bottom" secondItem="X3c-dP-hLs" secondAttribute="bottom" constant="50" id="HgA-Ex-akU"/>
                             <constraint firstItem="A2v-qr-EGl" firstAttribute="trailing" secondItem="oSd-k9-b2X" secondAttribute="trailing" constant="16" id="HwD-Sa-ooI"/>
-                            <constraint firstItem="A2v-qr-EGl" firstAttribute="bottom" secondItem="GJd-4h-YrN" secondAttribute="bottom" id="Pej-x7-UfX"/>
                             <constraint firstItem="A2v-qr-EGl" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="X3c-dP-hLs" secondAttribute="trailing" constant="100" id="YoL-x3-eT3"/>
                             <constraint firstItem="X3c-dP-hLs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="u2E-u8-t4w" secondAttribute="bottom" constant="20" id="edB-7P-npr"/>
                             <constraint firstItem="X3c-dP-hLs" firstAttribute="centerX" secondItem="VXa-Gf-gW2" secondAttribute="centerX" id="lz7-46-Vat"/>
-                            <constraint firstItem="GJd-4h-YrN" firstAttribute="leading" secondItem="A2v-qr-EGl" secondAttribute="leading" id="pI6-ye-eTg"/>
                             <constraint firstItem="u2E-u8-t4w" firstAttribute="top" secondItem="oSd-k9-b2X" secondAttribute="bottom" constant="20" id="scr-M7-5p5"/>
-                            <constraint firstItem="GJd-4h-YrN" firstAttribute="top" secondItem="A2v-qr-EGl" secondAttribute="top" id="vhr-mS-GAu"/>
-                            <constraint firstItem="A2v-qr-EGl" firstAttribute="trailing" secondItem="GJd-4h-YrN" secondAttribute="trailing" id="wrB-dR-xoY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A2v-qr-EGl"/>
                     </view>
@@ -220,11 +201,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Jz-SE-tXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2063" y="-17"/>
+            <point key="canvasLocation" x="2100" y="-17"/>
         </scene>
     </scenes>
     <resources>
         <image name="Hard_Quiz_ABC_Logo" width="356" height="220"/>
-        <image name="box_off" width="24" height="24"/>
     </resources>
 </document>
