@@ -10,13 +10,14 @@ import UIKit
 
 class QuestionsViewController: UIViewController {
     
+    // MARK: - Outlets
     @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet weak var singleStackView: UIStackView!
     @IBOutlet var singleButtons: [UIButton]!
     
+    // MARK: - Vars
     var questionIndex = 0
-    var answersChosen = [Answer]()
     var questions: [Question] = [
         
         Question(
@@ -24,7 +25,7 @@ class QuestionsViewController: UIViewController {
             answers: [
                 Answer(text: "instantly leave it on that channel! Aerosmith rock!", type: .rocker),
                 Answer(text: "Eh? Who are Aerosmith?", type: .mid),
-                Answer(text: "You convince yourself Aerosmith are rubbish.", type: .fogey)
+                Answer(text: "You convince yourself Aerosmith are rubbish", type: .fogey)
             ]
         ),
         
@@ -49,7 +50,7 @@ class QuestionsViewController: UIViewController {
         Question(
             text: "You've just seen Lauri from the Rasmus, and he's walking up to you, do you...",
             answers: [
-                Answer(text: "Look casual. I don't want him to think I'm a jerk.", type: .mid),
+                Answer(text: "Look casual. I don't want him to think I'm a jerk", type: .mid),
                 Answer(text: "Lauri, is that a boy, a girl, or a plant like the other one?", type: .fogey),
                 Answer(text: "Run over and snag his face off!", type: .rocker)
             ]
@@ -68,7 +69,7 @@ class QuestionsViewController: UIViewController {
             text: "You see Jimmy Page looking at Hendrix albums in HMV. You approach him. He says \"Do...\" but before he finishes his sentence you've...",
             answers: [
                 Answer(text: "Oh c'mon! Now your just making up people's names!", type: .fogey),
-                Answer(text: "I'm too polite to interrupt.", type: .mid),
+                Answer(text: "I'm too polite to interrupt", type: .mid),
                 Answer(text: "Driven him back to my place, of course!", type: .rocker)
             ]
         ),
@@ -76,8 +77,8 @@ class QuestionsViewController: UIViewController {
         Question(
             text: "You're spoilt for choice! You're meant to be going on a date with a cool guy/girl, but you COULD go to an Iron Maiden concert instead. Do you...",
             answers: [
-                Answer(text: "Maiden would be cooler than this guy/girl hands down. Go to the concert, of course!", type: .rocker),
-                Answer(text: "Ring the guy/girl and rearrange when to go.", type: .mid),
+                Answer(text: "Go to the concert, of course!", type: .rocker),
+                Answer(text: "Ring the guy/girl and rearrange when to go", type: .mid),
                 Answer(text: "Iron Maiden? Who are you, someone from the stone age?", type: .fogey)
             ]
         ),
@@ -87,7 +88,7 @@ class QuestionsViewController: UIViewController {
             answers: [
                 Answer(text: "Haa-ha, there last name is a colour!", type: .fogey),
                 Answer(text: "NOOOOOOOOO!", type: .rocker),
-                Answer(text: "Oh well, we all move on sometime.", type: .mid)
+                Answer(text: "Oh well, we all move on sometime", type: .mid)
             ]
         ),
         
@@ -103,40 +104,29 @@ class QuestionsViewController: UIViewController {
         Question(
             text: "It's the last question. Is rock the thing on your mind right...NOW!",
             answers: [
-                Answer(text: "Nah, I've more important things to think about.", type: .mid),
-                Answer(text: "Rock is always on my mind. ", type: .rocker),
-                Answer(text: "I'm hungry. ", type: .fogey)
+                Answer(text: "Nah, I've more important things to think about", type: .mid),
+                Answer(text: "Rock is always on my mind", type: .rocker),
+                Answer(text: "I'm hungry", type: .fogey)
             ]
         ),
     ]
     
+    var answersChosen = [Answer]()
+    
+    // MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
     }
     
-    func nextQuestion () {
-        questionIndex += 1
-        if questionIndex < questions.count {
-            updateUI()
-        } else {
-            performSegue(withIdentifier: "showResult", sender: nil)
-        }
-    }
-
-    
-    @IBAction func singleButtonPressed(_ sender: UIButton) {
-        let answers = questions[questionIndex].answers
-        guard let index = singleButtons.firstIndex(of: sender) else { return }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "showResult",
+        let destination = segue.destination as? ResultsViewController else { return }
         
-        let answer = answers[index]
-        answersChosen.append(answer)
-//        print(#function, answer)
-//        print()
-        
-        nextQuestion()
+        destination.answers = answersChosen
     }
     
+    // MARK: - Methods
     func updateUI() {
         singleStackView.isHidden = true
         
@@ -147,25 +137,31 @@ class QuestionsViewController: UIViewController {
         questionLabel.text = question.text
         questionLabel.numberOfLines = 0
         
+        updateSingleStack(with: answers)
+    }
+        
         func updateSingleStack (with answers: [Answer]) {
-            
             singleStackView.isHidden = false
             
-            //            for i in 0..<singleButtons.count {
-            //                singleButtons[i].setTitle(answers[i].text, for: .normal)
-            //            }
             guard singleButtons.count <= answers.count else { return }
             singleButtons.enumerated().forEach { $0.element.setTitle(answers[$0.offset].text, for: .normal) }
-            
         }
-        
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            
-            guard segue.identifier == "showResult",
-            let destination = segue.destination as? ResultsViewController else { return }
-            
-    //        destination.answers = answersChosen
+    
+    func nextQuestion () {
+        questionIndex += 1
+        if questionIndex < questions.count {
+            updateUI()
+        } else {
+            performSegue(withIdentifier: "showResult", sender: nil)
         }
     }
     
+    @IBAction func singleButtonPressed(_ sender: UIButton) {
+        let answers = questions[questionIndex].answers
+        guard let index = singleButtons.firstIndex(of: sender) else { return }
+        
+        let answer = answers[index]
+        answersChosen.append(answer)
+        nextQuestion()
+    }
 }

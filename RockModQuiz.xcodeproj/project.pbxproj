@@ -12,11 +12,11 @@
 		4BEDE406228055F5001D069A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BEDE405228055F5001D069A /* Assets.xcassets */; };
 		4BEDE409228055F5001D069A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BEDE407228055F5001D069A /* LaunchScreen.storyboard */; };
 		4BEDE4172280570E001D069A /* NewRocker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BEDE4162280570E001D069A /* NewRocker-Regular.ttf */; };
-		4BEDE41922805723001D069A /* Beautiful People Personal Use.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BEDE41822805723001D069A /* Beautiful People Personal Use.ttf */; };
 		4BEDE41B228062C8001D069A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEDE41A228062C8001D069A /* WelcomeViewController.swift */; };
 		4BEDE41D228062FE001D069A /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEDE41C228062FE001D069A /* QuestionsViewController.swift */; };
 		4BEDE41F2280631E001D069A /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEDE41E2280631E001D069A /* ResultsViewController.swift */; };
 		4BEDE421228063C2001D069A /* QuestionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEDE420228063C2001D069A /* QuestionsData.swift */; };
+		4BEDE42322881FFB001D069A /* FogeyFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BEDE42222881FFB001D069A /* FogeyFont.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +27,11 @@
 		4BEDE408228055F5001D069A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BEDE40A228055F5001D069A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BEDE4162280570E001D069A /* NewRocker-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewRocker-Regular.ttf"; sourceTree = "<group>"; };
-		4BEDE41822805723001D069A /* Beautiful People Personal Use.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Beautiful People Personal Use.ttf"; sourceTree = "<group>"; };
 		4BEDE41A228062C8001D069A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		4BEDE41C228062FE001D069A /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		4BEDE41E2280631E001D069A /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		4BEDE420228063C2001D069A /* QuestionsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsData.swift; sourceTree = "<group>"; };
+		4BEDE42222881FFB001D069A /* FogeyFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FogeyFont.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				4BEDE4162280570E001D069A /* NewRocker-Regular.ttf */,
-				4BEDE41822805723001D069A /* Beautiful People Personal Use.ttf */,
+				4BEDE42222881FFB001D069A /* FogeyFont.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -177,10 +177,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BEDE42322881FFB001D069A /* FogeyFont.ttf in Resources */,
 				4BEDE4172280570E001D069A /* NewRocker-Regular.ttf in Resources */,
 				4BEDE409228055F5001D069A /* LaunchScreen.storyboard in Resources */,
 				4BEDE406228055F5001D069A /* Assets.xcassets in Resources */,
-				4BEDE41922805723001D069A /* Beautiful People Personal Use.ttf in Resources */,
 				4BEDE404228055F4001D069A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

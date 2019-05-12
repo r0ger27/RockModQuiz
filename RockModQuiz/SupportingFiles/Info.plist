@@ -28,8 +28,8 @@
 	<string>Main</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>FogeyFont.ttf</string>
 		<string>NewRocker-Regular.ttf</string>
-		<string>Beautiful People Personal Use.ttf</string>
 	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>

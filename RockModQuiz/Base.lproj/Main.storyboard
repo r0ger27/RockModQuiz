@@ -31,15 +31,18 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a Rocker or a Fogey?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3S-r8-H25">
-                                <rect key="frame" x="16" y="286" width="288" height="69"/>
+                                <rect key="frame" x="16" y="276" width="288" height="69"/>
                                 <fontDescription key="fontDescription" name="NewRocker-Regular" family="NewRocker" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTA-VU-HfB">
-                                <rect key="frame" x="127" y="481" width="66" height="37"/>
-                                <fontDescription key="fontDescription" name="NewRocker-Regular" family="NewRocker" pointSize="20"/>
-                                <state key="normal" title="START"/>
+                                <rect key="frame" x="16" y="484" width="288" height="34"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="uxT-N7-Ec0" kind="show" id="5Y1-NU-jmz"/>
                                 </connections>
@@ -47,21 +50,23 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fTA-VU-HfB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0xj-bT-oEN"/>
                             <constraint firstItem="G3S-r8-H25" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="AAm-1A-79d"/>
                             <constraint firstAttribute="trailing" secondItem="G3S-r8-H25" secondAttribute="trailing" constant="16" id="AtC-lC-7Xa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fTA-VU-HfB" secondAttribute="bottom" constant="50" id="Dlj-iV-RcK"/>
                             <constraint firstItem="fTA-VU-HfB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="G3S-r8-H25" secondAttribute="bottom" constant="100" id="Fv2-Qa-6Th"/>
                             <constraint firstItem="eXt-Lq-0Tt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KLb-e1-JC4"/>
+                            <constraint firstItem="fTA-VU-HfB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SMD-tY-ABr"/>
                             <constraint firstItem="eXt-Lq-0Tt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="X2B-5B-Yxc"/>
-                            <constraint firstItem="G3S-r8-H25" firstAttribute="top" secondItem="eXt-Lq-0Tt" secondAttribute="bottom" constant="30" id="fWc-cc-8Xs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fTA-VU-HfB" secondAttribute="trailing" constant="100" id="fXg-sm-WRr"/>
+                            <constraint firstItem="G3S-r8-H25" firstAttribute="top" secondItem="eXt-Lq-0Tt" secondAttribute="bottom" constant="20" id="fWc-cc-8Xs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eXt-Lq-0Tt" secondAttribute="trailing" constant="16" id="oxC-Jc-tsZ"/>
-                            <constraint firstItem="fTA-VU-HfB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="zbF-gz-Gsg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fTA-VU-HfB" secondAttribute="trailing" constant="16" id="vYX-7V-Ozj"/>
                             <constraint firstItem="eXt-Lq-0Tt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ztt-Cf-yfY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="fTA-VU-HfB" id="V8H-jn-mzu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,34 +97,67 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvu-DF-4eS">
-                                <rect key="frame" x="103.5" y="141" width="113.5" height="25"/>
-                                <fontDescription key="fontDescription" name="NewRocker-Regular" family="NewRocker" pointSize="20"/>
+                                <rect key="frame" x="102" y="141" width="116" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="AMm-Yu-I8l">
-                                <rect key="frame" x="16" y="236" width="288" height="119"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AMm-Yu-I8l">
+                                <rect key="frame" x="8" y="205" width="304" height="170"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhM-IY-Jck">
-                                        <rect key="frame" x="59.5" y="0.0" width="169" height="37"/>
-                                        <fontDescription key="fontDescription" name="NewRocker-Regular" family="NewRocker" pointSize="20"/>
-                                        <state key="normal" title="Answer number one"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KhM-IY-Jck">
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="nSK-f0-hcY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Answer number one">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="singleButtonPressed:" destination="8Yb-w6-ATA" eventType="touchUpInside" id="Pv4-ow-bXd"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImC-Dk-4vK">
-                                        <rect key="frame" x="58.5" y="41" width="171" height="37"/>
-                                        <fontDescription key="fontDescription" name="NewRocker-Regular" family="NewRocker" pointSize="20"/>
-                                        <state key="normal" title="Answer number two"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ImC-Dk-4vK">
+                                        <rect key="frame" x="0.0" y="60" width="304" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="sg0-kb-wXk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Answer number two">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="singleButtonPressed:" destination="8Yb-w6-ATA" eventType="touchUpInside" id="NJ5-hs-ZLW"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haV-Qo-fZj">
-                                        <rect key="frame" x="52.5" y="82" width="183" height="37"/>
-                                        <fontDescription key="fontDescription" name="NewRocker-Regular" family="NewRocker" pointSize="20"/>
-                                        <state key="normal" title="Answer number three"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="haV-Qo-fZj">
+                                        <rect key="frame" x="0.0" y="120" width="304" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="P9Y-zV-bMA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Answer number three">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="singleButtonPressed:" destination="8Yb-w6-ATA" eventType="touchUpInside" id="8AD-dn-79Q"/>
                                         </connections>
@@ -129,13 +167,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="rW2-mg-5B8" firstAttribute="trailing" secondItem="AMm-Yu-I8l" secondAttribute="trailing" constant="16" id="5UJ-Tu-1Px"/>
-                            <constraint firstItem="AMm-Yu-I8l" firstAttribute="top" secondItem="Xvu-DF-4eS" secondAttribute="bottom" constant="70" id="7qe-WO-g8M"/>
+                            <constraint firstItem="rW2-mg-5B8" firstAttribute="trailing" secondItem="AMm-Yu-I8l" secondAttribute="trailing" constant="8" id="5UJ-Tu-1Px"/>
+                            <constraint firstItem="AMm-Yu-I8l" firstAttribute="top" secondItem="Xvu-DF-4eS" secondAttribute="bottom" constant="40" id="7qe-WO-g8M"/>
                             <constraint firstItem="rW2-mg-5B8" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="AMm-Yu-I8l" secondAttribute="bottom" constant="30" id="Cnb-7F-Mf1"/>
                             <constraint firstItem="Xvu-DF-4eS" firstAttribute="top" secondItem="rW2-mg-5B8" secondAttribute="top" constant="30" id="Tdx-LD-LWY"/>
                             <constraint firstItem="rW2-mg-5B8" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Xvu-DF-4eS" secondAttribute="trailing" constant="16" id="VjZ-ba-aQw"/>
                             <constraint firstItem="Xvu-DF-4eS" firstAttribute="centerX" secondItem="p8a-Kb-F0K" secondAttribute="centerX" id="i3W-lG-N10"/>
-                            <constraint firstItem="AMm-Yu-I8l" firstAttribute="leading" secondItem="rW2-mg-5B8" secondAttribute="leading" constant="16" id="jpU-py-7Fw"/>
+                            <constraint firstItem="AMm-Yu-I8l" firstAttribute="leading" secondItem="rW2-mg-5B8" secondAttribute="leading" constant="8" id="jpU-py-7Fw"/>
                             <constraint firstItem="Xvu-DF-4eS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rW2-mg-5B8" secondAttribute="leading" constant="16" id="lH8-A3-diu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rW2-mg-5B8"/>
@@ -163,41 +201,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are a ......!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSd-k9-b2X">
-                                <rect key="frame" x="16" y="143" width="288" height="43.5"/>
-                                <fontDescription key="fontDescription" name="NewRocker-Regular" family="NewRocker" pointSize="35"/>
+                                <rect key="frame" x="16" y="143" width="288" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blah blah blah...some text about your answers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2E-u8-t4w">
-                                <rect key="frame" x="16" y="206.5" width="288" height="44.5"/>
-                                <fontDescription key="fontDescription" name="NewRocker-Regular" family="NewRocker" pointSize="18"/>
+                                <rect key="frame" x="16" y="219" width="288" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3c-dP-hLs">
-                                <rect key="frame" x="134" y="481" width="52" height="37"/>
-                                <fontDescription key="fontDescription" name="NewRocker-Regular" family="NewRocker" pointSize="20"/>
-                                <state key="normal" title="Again"/>
+                                <rect key="frame" x="16" y="484" width="288" height="34"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Again">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="frB-AR-NdT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="A2v-qr-EGl" firstAttribute="trailing" secondItem="u2E-u8-t4w" secondAttribute="trailing" constant="16" id="1WX-9Y-8mL"/>
+                            <constraint firstItem="A2v-qr-EGl" firstAttribute="trailing" secondItem="X3c-dP-hLs" secondAttribute="trailing" constant="16" id="2DX-ai-hcQ"/>
                             <constraint firstItem="u2E-u8-t4w" firstAttribute="leading" secondItem="A2v-qr-EGl" secondAttribute="leading" constant="16" id="7Jd-PY-83E"/>
-                            <constraint firstItem="X3c-dP-hLs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="A2v-qr-EGl" secondAttribute="leading" constant="100" id="9m8-WD-kJ2"/>
                             <constraint firstItem="oSd-k9-b2X" firstAttribute="top" secondItem="A2v-qr-EGl" secondAttribute="top" constant="32" id="Enl-aA-3gV"/>
                             <constraint firstItem="oSd-k9-b2X" firstAttribute="leading" secondItem="A2v-qr-EGl" secondAttribute="leading" constant="16" id="FNr-XS-oz5"/>
                             <constraint firstItem="A2v-qr-EGl" firstAttribute="bottom" secondItem="X3c-dP-hLs" secondAttribute="bottom" constant="50" id="HgA-Ex-akU"/>
                             <constraint firstItem="A2v-qr-EGl" firstAttribute="trailing" secondItem="oSd-k9-b2X" secondAttribute="trailing" constant="16" id="HwD-Sa-ooI"/>
-                            <constraint firstItem="A2v-qr-EGl" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="X3c-dP-hLs" secondAttribute="trailing" constant="100" id="YoL-x3-eT3"/>
+                            <constraint firstItem="X3c-dP-hLs" firstAttribute="leading" secondItem="A2v-qr-EGl" secondAttribute="leading" constant="16" id="ICH-VW-zUK"/>
                             <constraint firstItem="X3c-dP-hLs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="u2E-u8-t4w" secondAttribute="bottom" constant="20" id="edB-7P-npr"/>
-                            <constraint firstItem="X3c-dP-hLs" firstAttribute="centerX" secondItem="VXa-Gf-gW2" secondAttribute="centerX" id="lz7-46-Vat"/>
-                            <constraint firstItem="u2E-u8-t4w" firstAttribute="top" secondItem="oSd-k9-b2X" secondAttribute="bottom" constant="20" id="scr-M7-5p5"/>
+                            <constraint firstItem="u2E-u8-t4w" firstAttribute="top" secondItem="oSd-k9-b2X" secondAttribute="bottom" constant="40" id="scr-M7-5p5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A2v-qr-EGl"/>
                     </view>
                     <navigationItem key="navigationItem" title="Results" id="010-YE-gW9"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="againButton" destination="X3c-dP-hLs" id="yQS-PE-ikA"/>
+                        <outlet property="resultDefinition" destination="u2E-u8-t4w" id="bUj-na-z13"/>
+                        <outlet property="resultType" destination="oSd-k9-b2X" id="IgW-pu-2qf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Jz-SE-tXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
