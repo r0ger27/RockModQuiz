@@ -10,4 +10,4 @@ In this application we have to make small quiz (any topic), and depending on res
 12.05.19 Updated:
 - fixed: several bugs and errors.
 - added: icons.
-Bonus: added audio text on the last screen!
+[b]- Bonus: added audio text on the last screen! [/b]
