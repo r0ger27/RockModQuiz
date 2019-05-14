@@ -133,7 +133,7 @@ class QuestionsViewController: UIViewController {
         let question = questions[questionIndex]
         let answers = question.answers
         
-        navigationItem.title = "Question № \(questionIndex + 1) of 10"
+        navigationItem.title = "Question № \(questionIndex + 1) of \(questions.count)"
         questionLabel.text = question.text
         questionLabel.numberOfLines = 0
         
