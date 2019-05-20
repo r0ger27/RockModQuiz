@@ -1,5 +1,5 @@
 # RockModQuiz
-Homework # 3 for the Switbook.ru, Webinar #3
+Homework # 3 for the Switbook.ru, Webinar #4
 
 In this application we have to make small quiz (any topic), and depending on result of answers to show the necessary text on last screen
 
